@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.top.index');
 });
+
+Route::get('top/index', 'TopController@index')->name('top');
+Route::post('user/sendmail', 'UserController@sendmail')->name('user_send_mail');
